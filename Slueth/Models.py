@@ -1,13 +1,6 @@
 import tensorflow as tf
 import numpy as np
 
-#Logged Device Information
-device_types = {
-    '00:0a:95:9d:68:16': 0, # laptop
-    '00:0b:82:c9:52:11': 1, # smartphone
-    '00:0c:29:c3:f9:9b': 2  # tablet
-}
-
 def train_model(model: tf.keras.Model, x_train: np.ndarray, y_train: np.ndarray,
                 x_val: np.ndarray, y_val: np.ndarray, epochs: int) -> tf.keras.callbacks.History:
     """Trains a model on the given data.
