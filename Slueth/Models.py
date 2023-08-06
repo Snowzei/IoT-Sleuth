@@ -34,8 +34,11 @@ Classification Models:
 -------------------------------
 '''
 
-def create_naive_bayes_model() -> tf.keras.Model:
+def create_naive_bayes_model(num_classes: int) -> tf.keras.Model:
     """Creates a naive bayes model for predicting device types.
+
+    Args:
+        int: 
 
     Returns:
         tf.keras.Model: A TensorFlow model object.
@@ -49,7 +52,7 @@ def create_naive_bayes_model() -> tf.keras.Model:
     
     return model
 
-def create_SVM_model() -> tf.keras.Model:
+def create_SVM_model(num_classes: int) -> tf.keras.Model:
     """Creates a Support vector machine model for predicting device types.
 
     Returns:
@@ -63,7 +66,7 @@ def create_SVM_model() -> tf.keras.Model:
     
     return model
 
-def create_KNN_model() -> tf.keras.Model:
+def create_KNN_model(num_classes: int) -> tf.keras.Model:
     """Creates a K Nearest Neighbour model for predicting device types.
 
     Returns:
@@ -79,7 +82,7 @@ def create_KNN_model() -> tf.keras.Model:
     
     return model
 
-def create_random_forest_model() -> tf.keras.Model:
+def create_random_forest_model(num_classes: int) -> tf.keras.Model:
     """Creates a Random Forest model for predicting device types.
 
     Returns:
