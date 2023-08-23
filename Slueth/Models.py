@@ -70,7 +70,7 @@ def evaluate_neural_network(trained_model, test_features, test_labels, normalise
     print("Test Accuracy:", accuracy)
     return
 
-def create_and_train_neural_network_mk_1(train_features, train_labels, num_epochs=10):
+def create_neural_network_mk_1(train_features, train_labels, num_epochs=10):
     # Get the num_classes from the data
     num_classes = len(unique(train_labels))
     # Create a neural network model
@@ -85,7 +85,7 @@ def create_and_train_neural_network_mk_1(train_features, train_labels, num_epoch
     model.fit(train_features, train_labels, epochs=num_epochs, verbose=1)
     return model
 
-def create_and_train_neural_network_mk_2(train_features, train_labels, num_epochs=10):
+def create_neural_network_mk_2(train_features, train_labels, num_epochs=10):
     # Encode labels
     label_encoder = LabelEncoder()
     encoded_labels = label_encoder.fit_transform(train_labels)
@@ -106,7 +106,7 @@ def create_and_train_neural_network_mk_2(train_features, train_labels, num_epoch
     model.fit(train_features, encoded_labels, epochs=num_epochs, verbose=1)
     return model
 
-def create_and_train_neural_network_mk_3(train_features, train_labels, num_epochs=10):
+def create_neural_network_mk_3(train_features, train_labels, num_epochs=10):
     # Normalise features
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(train_features)
@@ -131,7 +131,7 @@ def create_and_train_neural_network_mk_3(train_features, train_labels, num_epoch
     model.fit(scaled_features, train_labels, epochs=num_epochs, verbose=1)
     return model
 
-def create_and_train_neural_network_mk_4(train_features, train_labels, num_epochs=10):
+def create_neural_network_mk_4(train_features, train_labels, num_epochs=10):
     # Normalise features
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(train_features)
