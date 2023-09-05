@@ -21,7 +21,7 @@ def convert_hex_to_int(value:str)->int:
         return int(value, 16)
     return value
 
-def preprocess_csv(csv_file:str, shuffle:bool = True)->tuple:
+def preprocess_csv(csv_file:str, shuffle:bool = True, drop_length:bool = False, drop_window_size:bool = False)->tuple:
     '''
     Preprocesses a CSV file containing IoT network data for machine learning.
 
@@ -53,6 +53,10 @@ def preprocess_csv(csv_file:str, shuffle:bool = True)->tuple:
     df.fillna(0, inplace=True)
     # Remove the "Info" column
     df = df.drop("Info", axis=1)
+    if drop_length:
+        df = df.drop("Length", axis=1)
+    if drop_window_size:
+        df = df.drop("Window Size", axis=1)
     # Shuffle the dataset
     if shuffle:
         df = df.sample(frac=1).reset_index(drop=True)

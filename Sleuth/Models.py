@@ -106,14 +106,14 @@ def create_svc(features: ndarray, labels: ndarray) -> SVC:
 
 def create_knn(features: ndarray, labels: ndarray) -> KNeighborsClassifier:
     '''
-    Creates and trains a K-Nearest Neighbors model.
+    Creates and trains a K-Nearest Neighbours model.
 
     Parameters:
         features (ndarray): Input features as a 2D NumPy array.
         labels (ndarray): Target labels as a 1D NumPy array.
 
     Returns:
-        KNeighborsClassifier: Trained K-Nearest Neighbors model.
+        KNeighborsClassifier: Trained K-Nearest Neighbours model.
     '''
     model = KNeighborsClassifier()
     model.fit(features, labels)
