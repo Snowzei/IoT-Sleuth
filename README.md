@@ -8,7 +8,11 @@
 [![Library](https://img.shields.io/badge/Library-scikit--learn-blueviolet)](https://scikit-learn.org/stable/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-Welcome to the IoT Device Identification project IoT-Slueth! This project explores various machine learning models, including classic identifiers like Multinomial Naive Bayes, Random Forest, Decision Tree, K-Nearest Neighbors, and C-Support Vector Classification, alongside a custom neural network model trained on benign traffic. The goal is to accurately identify and classify IoT devices within a network.
+Welcome to the IoT Device Identification project IoT-Slueth! 
+
+This Project was made as a POC for a master's thesis at the University of Cardiff. 
+
+This project explores various machine learning models, including classic identifiers like Multinomial Naive Bayes, Random Forest, Decision Tree, K-Nearest Neighbors, and C-Support Vector Classification, alongside a custom neural network model trained on benign traffic. The goal is to accurately identify and classify IoT devices within a network.
 
 ## Table of Contents
 
